@@ -1,0 +1,25 @@
+<!-- contact form -->
+  <div class="row" id="contact">
+    <form class="col s12" id="email-form" action="mailto:a.m.sopkin@gmail.com" method="post">
+      <div class="row">
+		<div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" name="name" class="validate" ng-model="user.name">
+          <label for="name" class="form-label">Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="email" type="email" name="email" class="validate" ng-model="user.email">
+          <label for="email" data-error="wrong" data-success="right">Email</label>
+        </div><br><br><br>
+         <div class="input-field col s12">
+          <i class="material-icons prefix">message</i>
+          <textarea id="message" name="message" class="materialize-textarea" ng-model="user.message"></textarea>
+          <label for="message">Message</label>
+        </div>
+      </div>
+      <center>
+      <a class="waves-effect waves-light btn" id="submit-button" ng-click="update(user)"><i class="material-icons left">check circle</i>Submit</a> 
+      </center>
+    </form>
+  </div>

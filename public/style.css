@@ -1,0 +1,386 @@
+
+/* fonts */
+@font-face {
+  font-family: 'mankSans';
+  src: url('media/MankSans-Medium.ttf'); /* IE9 Compat Modes */
+}
+
+body{
+    font-family: 'Arial';
+}
+
+/* nav */
+
+.nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 25px;
+
+
+    font-color: black;
+    font-family: 'mankSans';
+    font-size: 30px;
+}
+.nav li{
+  position: relative;
+  display: inline;
+}
+.nav p{
+  display: inline;
+}
+.nav li a{
+  color: inherit;
+  text-decoration: none;
+    color:#333;
+  display:inline-block;
+  padding:10px;
+}
+
+.nav span {
+  display:block;
+  width:calc(100% - 23px);
+  height:4px;
+  background:#333;
+  position:absolute;
+  left:10px;
+  bottom:-10px;
+}
+
+.nav li a:hover {
+
+  /* color when hover */
+  color:#C0392B;
+}
+
+.nav li a:hover ~ span {
+   animation:ul 0.3s ease-out;
+
+   /* color bottom bar turns with hover */
+   background:#C0392B;
+}
+
+@keyframes ul {
+  0% { 
+    width:0;
+  }
+  100% { 
+    width:calc(100% - 23px);
+  }
+}
+
+/* body */
+body{
+}
+
+
+
+
+
+#history {
+    display: block;
+    position: relative;
+    margin: 10% auto;
+    text-align: center;
+}
+
+#timeline_track {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 6px;
+    height: 800px;
+    background-color: #e9edf0;
+}
+
+#historic_event_1, #historic_event_2, #historic_event_3, #historic_event_4 {
+    transition: opacity 0.600ms ease;
+    display: table;
+    position: absolute;
+    width: 30%;
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    .opacity (.50, 50);
+
+    .transition (opacity 600ms ease);
+}
+
+#historic_event_1:hover, #historic_event_1.current, #historic_event_2:hover, #historic_event_2.current, #historic_event_3:hover, #historic_event_3.current, #historic_event_4:hover, #historic_event_4.current {
+    .opacity (1.0, 100);
+}
+
+#historic_event_1 {
+  /* 95 -> 79 */
+    top: 10%;
+    left: 44%;
+}
+
+#historic_event_2 {
+    top: 35%;
+    left: 24%;
+}
+
+#historic_event_3 {
+    top: 62%;
+    left: 44%;
+}
+
+#historic_event_4 {
+    top: 86%;
+    left: 24%;
+}
+
+.historic_year {
+    display: table-cell;
+    vertical-align: middle;
+    width: 33%;
+    text-align: center;
+}
+
+#historic_text_1, #historic_text_2, #historic_text_3, #historic_text_4 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 53%;
+    text-align: left;
+}
+
+.historic_dot_wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 13%;
+    text-align: center;
+}
+
+.historic_dot {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #E67E22;
+    cursor: pointer;
+    z-index: 100;
+    .border-radius (100%);
+    .box-shadow (0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de);
+}
+
+#historic_event_1:hover #historic_dot_1, #historic_event_2:hover #historic_dot_2, #historic_event_3:hover #historic_dot_3, #historic_event_4:hover #historic_dot_4, {
+    .transform (scale(1.15) translate3d(0,0,0));
+}
+
+#historic_dot_1, #historic_dot_3{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: -7px;
+    top: -7px;
+}
+
+#historic_dot_2, #historic_dot_4{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: 7px;
+    top: -5px;
+}
+
+
+
+
+#history_clock {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -18px;
+    width: 34px;
+    height: 34px;
+    background-color: none;
+    z-index: 200;
+    transition: top 400ms ease;
+}
+#history_clock img{
+  color: red;
+  height: 34px;
+  width: 34px;
+}
+#history_clock.animate1 {
+    top: 300px;
+}
+
+#history_clock.animate2 {
+    top: 500px;
+}
+
+#history_clock.animate3 {
+    top: 697px;
+}
+
+#clockface {
+    display: block;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    width: 26px;
+    height: 27px;
+    .border-radius (100%);
+    .2-color-gradient (#596c7c, darken(#596c7c, 13%), 25%, 75%);
+    .box-shadow (0 0 0 1px #d1d8de, 0 0 20px rgba(0,0,0,0.25) inset);
+}
+
+
+/* mixins */
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.box-shadow (@shadow1, @shadow2: transparent 0 0 0, @shadow3: transparent 0 0 0, @shadow4: transparent 0 0 0, @shadow5: transparent 0 0 0, @shadow6: transparent 0 0 0) {
+    -webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5, @shadow6;
+    -moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5, @shadow6;
+    box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5, @shadow6;
+}
+
+.2-color-gradient (@colorStart, @colorEnd, @position1: 0%, @position2: 100%, @angle: 90deg, @oldangle1: left top, @oldangle2: right bottom, @iegradtype: 0) {
+    background-color: @colorStart; /* Old browsers */
+    background-image: -moz-linear-gradient(@angle,  @colorStart @position1, @colorEnd @position2); /*FF3.6+ */
+    background-image: -webkit-gradient(@angle, @oldangle1, @oldangle2, color-stop(@position1, @colorStart), color-stop(@position2, @colorEnd)); /*Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(@angle,  @colorStart @position1, @colorEnd @position2); /*Chrome10+,Safari5.1+ */
+    background-image: -o-linear-gradient(@angle,  @colorStart @position1, @colorEnd @position2); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(@angle,  @colorStart @position1, @colorEnd @position2); /*IE10+ */
+    background-image: linear-gradient(@angle,  @colorStart @position1, @colorEnd @position2); /* W3C */
+    filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{colorEnd}', endColorstr='@{colorStart}', GradientType='@{iegradtype}' )"; /* IE6-9 */
+}
+
+.opacity (@opacity, @ieopacity) {
+    opacity: @opacity;
+    filter: "alpha(opacity=@{ieopacity})";
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieopacity})";
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+}
+
+.transform (@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform;
+    -o-transform: @transform;
+}
+
+.transform-origin (@originx, @originy) {
+    -webkit-transform-origin: @originx @originy;
+    -moz-transform-origin: @originx @originy;
+    -ms-transform-origin: @originx @originy;
+    -o-transform-origin: @originx @originy;
+}
+
+/* music */
+/* music info */
+.track-info{
+    padding-top: 60px;
+}
+.my-music{
+  h2{
+    padding-top: 60px;
+    font-family: simpleFont;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .dancing-music{
+    img{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    }
+  }
+}
+
+#music-recent{
+  padding-top: 20px;
+  list-style: none;
+  font-family: simpleFont;
+  font-size: 35px;
+  font-weight: bold;
+
+  /* center */
+  #music-card{
+    z-index: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    min-height: 820px;
+    max-height: 3000px;
+  }
+  .card-image{
+    height: 820px;
+    img{
+    opacity: 0.6;
+    }
+  }
+  .card-title{
+    font-size: 37px;
+    color: $ink-color;
+    font-weight: bold;
+    text-shadow: white 0px 0px 20px;
+  }
+  .card-content{
+    color: $ink-color;
+    font-size: 20px;
+    max-height: 300px;
+  }
+  .card-action{
+    color: $apricot-color;
+  }
+}
+
+#music-feed{
+  padding-top: 20px;
+  list-style: none;
+  font-family: simpleFont;
+  font-size: 35px;
+  font-weight: bold;
+
+  height: 100%;
+
+
+  /* center */
+  #music-card{
+    z-index: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    min-height: 820px;
+    max-height: 3000px;
+  }
+  .card-image{
+    height: 820px;
+    img{
+    opacity: 0.6;
+    }
+  }
+  .card-title{
+    font-size: 37px;
+    color: $ink-color;
+    font-weight: bold;
+    text-shadow: white 0px 0px 20px;
+  }
+  .card-content{
+    color: $ink-color;
+    font-size: 20px;
+  }
+  .card-action{
+    color: $apricot-color;
+  }
+}
+
+
