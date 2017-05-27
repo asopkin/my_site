@@ -4291,8 +4291,8 @@ body {
 
 /* line 117, ../../source_sass/_base.scss */
 #historic_event_2 {
-  top: 35%;
-  left: 24%; }
+  top: 36%;
+  left: 22%; }
 
 /* line 122, ../../source_sass/_base.scss */
 #historic_event_3 {
@@ -4302,7 +4302,7 @@ body {
 /* line 127, ../../source_sass/_base.scss */
 #historic_event_4 {
   top: 86%;
-  left: 24%; }
+  left: 22%; }
 
 /* line 132, ../../source_sass/_base.scss */
 .historic_year {
@@ -4368,8 +4368,8 @@ body {
 /* line 196, ../../source_sass/_base.scss */
 #history_clock img {
   color: red;
-  height: 34px;
-  width: 34px; }
+  height: 28px;
+  width: 28px; }
 
 /* line 201, ../../source_sass/_base.scss */
 #history_clock.animate1 {
