@@ -136,7 +136,7 @@ body{
     text-align: center;
 }
 
-#historic_text_1, #historic_text_2, #historic_text_3, #historic_text_4 {
+#historic_text_1, #historic_text_2, #historic_text_3, #historic_text_4, #historic_text_5 {
     display: table-cell;
     vertical-align: middle;
     width: 53%;
@@ -378,10 +378,17 @@ body{
   
   color: black;
 
+  div {
+  float: left;
+  display: inline;
+  }
+
   #submit-button{
     font-size: 15px;
   }
 }
+
+.material-icons.orange600 { color: #FB8C00; }
 
 /* label color */
 .form-label{

@@ -74,7 +74,16 @@ body{
 body{
 }
 
+#homepage {
+    display: block;
+    position: relative;
+    margin: 5% 25% 25%;
+    text-align: center;
+}
 
+    #blurb{
+      margin-top: 5%;
+    }
 
 
 
@@ -94,7 +103,7 @@ body{
     background-color: #e9edf0;
 }
 
-#historic_event_1, #historic_event_2, #historic_event_3, #historic_event_4 {
+#historic_event_1, #historic_event_2, #historic_event_3, #historic_event_4, #historic_event_5, #historic_event_6 {
     transition: opacity 0.600ms ease;
     display: table;
     position: absolute;
@@ -107,28 +116,39 @@ body{
     .transition (opacity 600ms ease);
 }
 
-#historic_event_1:hover, #historic_event_1.current, #historic_event_2:hover, #historic_event_2.current, #historic_event_3:hover, #historic_event_3.current, #historic_event_4:hover, #historic_event_4.current {
+#historic_event_1:hover, #historic_event_1.current, #historic_event_2:hover, #historic_event_2.current, #historic_event_3:hover, #historic_event_3.current, #historic_event_4:hover, #historic_event_4.current,
+#historic_event_5:hover, #historic_event_5.current, #historic_event_6:hover, #historic_event_6.current {
     .opacity (1.0, 100);
 }
 
 #historic_event_1 {
   /* 95 -> 79 */
-    top: 10%;
+    top: 5%;
     left: 44%;
 }
 
 #historic_event_2 {
-    top: 35%;
+    top: 15%;
     left: 24%;
 }
 
 #historic_event_3 {
-    top: 62%;
+    top: 25%;
     left: 44%;
 }
 
 #historic_event_4 {
-    top: 86%;
+    top: 35%;
+    left: 24%;
+}
+
+#historic_event_5 {
+    top: 45%;
+    left: 44%;
+}
+
+#historic_event_6 {
+    top: 55%;
     left: 24%;
 }
 
@@ -139,7 +159,7 @@ body{
     text-align: center;
 }
 
-#historic_text_1, #historic_text_2, #historic_text_3, #historic_text_4 {
+#historic_text_1, #historic_text_2, #historic_text_3, #historic_text_4, #historic_text_5, #historic_text_6 {
     display: table-cell;
     vertical-align: middle;
     width: 53%;
@@ -166,11 +186,12 @@ body{
     .box-shadow (0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de);
 }
 
-#historic_event_1:hover #historic_dot_1, #historic_event_2:hover #historic_dot_2, #historic_event_3:hover #historic_dot_3, #historic_event_4:hover #historic_dot_4, {
+#historic_event_1:hover #historic_dot_1, #historic_event_2:hover #historic_dot_2, #historic_event_3:hover #historic_dot_3, #historic_event_4:hover #historic_dot_4, 
+#historic_event_5:hover, #historic_dot_5, #historic_event_6:hover, #historic_dot_6 {
     .transform (scale(1.15) translate3d(0,0,0));
 }
 
-#historic_dot_1, #historic_dot_3{
+#historic_dot_1, #historic_dot_3, #historic_dot_5{
     display: block;
     position: relative;
     margin: 0 auto;
@@ -178,7 +199,7 @@ body{
     top: -7px;
 }
 
-#historic_dot_2, #historic_dot_4{
+#historic_dot_2, #historic_dot_4, #historic_dot_6{
     display: block;
     position: relative;
     margin: 0 auto;
@@ -216,6 +237,10 @@ body{
 
 #history_clock.animate3 {
     top: 697px;
+}
+
+#history_clock.animate4 {
+    top: 900px;
 }
 
 #clockface {

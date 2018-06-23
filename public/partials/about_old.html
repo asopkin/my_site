@@ -1,0 +1,112 @@
+<div id="history">
+      
+      <div id="history_clock">
+          <img src="media/flower.ico"></img>
+      
+          <div id="clockface"> 
+            
+            <div id="clockglare"></div>
+            <div id="clockarm_1" ></div>
+            <div id="clockarm_2"></div>
+          
+          </div>
+      
+      </div>
+    
+      <div id="timeline_track"></div>
+      
+      <ul id="historic_event_1" class="current">
+      
+        <li class="historic_dot_wrapper"><div id="historic_dot_1" class="historic_dot"></div></li>
+        <li class="historic_year"><p></p></li>
+        <li id="historic_text_1"><p>I picked up my computer and coded my first website.</p></li>
+      
+      </ul>
+      
+      <ul id="historic_event_2">
+        
+        <li id="historic_text_2"><p>I got my degree in Computer Science and Mathematics.</p></li>
+        <li class="historic_year"><p></p></li>
+        <li class="historic_dot_wrapper"><div id="historic_dot_2" class="historic_dot"></div></li>
+      
+      </ul>
+      
+      <ul id="historic_event_3">
+        
+        <li class="historic_dot_wrapper"><div id="historic_dot_3" class="historic_dot"></div></li>
+        <li class="historic_year"><p></p></li>
+        <li id="historic_text_3"><p>I worked in the Internet of Things division at Intel.</p></li>
+      
+      </ul>
+      
+      <ul id="historic_event_4">
+      
+        <li id="historic_text_4"><p>I work at Zillow as a Fullstack Developer on the Rentals team.</p></li>
+        <li class="historic_year"><p></p></li>
+        <li class="historic_dot_wrapper"><div id="historic_dot_4" class="historic_dot"></div></li>
+      
+      </ul>
+
+      <ul id="historic_event_5">
+      
+        <li class="historic_dot_wrapper"><div id="historic_dot_5" class="historic_dot"></div></li>
+        <li id="historic_text_5"><p>Next</p></li>
+        <li class="historic_year"><p></p></li>
+      
+      </ul>
+      
+    </div>
+<!-- history ends -->
+<script>
+$(document).ready(function() {
+
+     $('.about_nav_content li:first-child a').click(function(){
+    $('#historic_event_1').addClass('current');
+    $('#historic_event_2').removeClass('current');
+    $('#historic_event_3').removeClass('current');
+    $('#historic_event_4').removeClass('current');
+    $('#historic_event_5').removeClass('current');
+    $('#history_clock').removeClass('animate1 animate2 animate3');
+    });
+    
+    var hoverOrClick = function(){
+      $("#history_clock").removeClass('animate1 animate2 animate3 animate4');
+      $('#historic_event_1').addClass('current');
+      $('#historic_event_2, #historic_event_3, #historic_event_4, #historic_event_5').removeClass('current');
+    }
+    $('#historic_dot_1, #historic_event_1').click(hoverOrClick).hover(hoverOrClick);
+    
+    var hoverOrClick = function(){
+      $('#history_clock').addClass('animate1');
+      $("#history_clock").removeClass('animate2 animate3 animate4');
+      $('#historic_event_2').addClass('current');
+      $('#historic_event_1, #historic_event_3, #historic_event_4, #historic_event_5').removeClass('current');
+    }
+    $('#historic_dot_2, #historic_event_2').click(hoverOrClick).hover(hoverOrClick);
+    
+    var hoverOrClick = function(){
+      $('#history_clock').addClass('animate2');
+      $("#history_clock").removeClass('animate1 animate3 anmimate4');
+      $('#historic_event_3').addClass('current');
+      $('#historic_event_1, #historic_event_2, #historic_event_4, #historic_event_5').removeClass('current');
+    }
+    $('#historic_dot_3, #historic_event_3').click(hoverOrClick).hover(hoverOrClick);
+    
+    var hoverOrClick = function(){
+      $('#history_clock').addClass('animate3');
+      $("#history_clock").removeClass('animate1 animate2 animate4');
+      $('#historic_event_4').addClass('current');
+      $('#historic_event_1, #historic_event_2, #historic_event_3, #historic_event_5').removeClass('current');
+    }
+    $('#historic_dot_4, #historic_event_4').click(hoverOrClick).hover(hoverOrClick);
+
+    var hoverOrClick = function(){
+      $('#history_clock').addClass('animate4');
+      $("#history_clock").removeClass('animate1 animate2 animate3');
+      $('#historic_event_5').addClass('current');
+      $('#historic_event_1, #historic_event_2, #historic_event_3, #historic_event_4').removeClass('current');
+    }
+    $('#historic_dot_5, #historic_event_5').click(hoverOrClick).hover(hoverOrClick);
+
+});
+</script>
