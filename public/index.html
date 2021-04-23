@@ -36,17 +36,7 @@
     </li>
     <p>|</p>
     <li>
-      <a href="./#/gallery">work</a>
-      <span></span>
-    </li>
-    <p>|</p>
-    <li>
       <a href="./#/contact">contact</a>
-      <span></span>
-    </li>
-    <p>|</p>
-    <li>
-      <a href="./#/mymusic">music</a>
       <span></span>
     </li>
   </ul>
@@ -73,14 +63,14 @@ $(document).ready(function() {
     $('#historic_event_4').removeClass('current');
     $('#history_clock').removeClass('animate1 animate2 animate3');
     });
-    
+
     var hoverOrClick = function(){
       $("#history_clock").removeClass('animate1 animate2 animate3');
       $('#historic_event_1').addClass('current');
       $('#historic_event_2, #historic_event_3, #historic_event_4').removeClass('current');
     }
     $('#historic_dot_1, #historic_event_1').click(hoverOrClick).hover(hoverOrClick);
-    
+
     var hoverOrClick = function(){
       $('#history_clock').addClass('animate1');
       $("#history_clock").removeClass('animate2 animate3');
@@ -88,7 +78,7 @@ $(document).ready(function() {
       $('#historic_event_1, #historic_event_3, #historic_event_4').removeClass('current');
     }
     $('#historic_dot_2, #historic_event_2').click(hoverOrClick).hover(hoverOrClick);
-    
+
     var hoverOrClick = function(){
       $('#history_clock').addClass('animate2');
       $("#history_clock").removeClass('animate1 animate3');
@@ -96,7 +86,7 @@ $(document).ready(function() {
       $('#historic_event_1, #historic_event_2, #historic_event_4').removeClass('current');
     }
     $('#historic_dot_3, #historic_event_3').click(hoverOrClick).hover(hoverOrClick);
-    
+
     var hoverOrClick = function(){
       $('#history_clock').addClass('animate3');
       $("#history_clock").removeClass('animate1 animate2');
