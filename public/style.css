@@ -62,10 +62,10 @@ body{
 }
 
 @keyframes ul {
-  0% { 
+  0% {
     width:0;
   }
-  100% { 
+  100% {
     width:calc(100% - 23px);
   }
 }
@@ -78,11 +78,12 @@ body{
     display: block;
     position: relative;
     margin: 5% 25% 25%;
-    text-align: center;
 }
 
     #blurb{
       margin-top: 5%;
+      font-size: 24px;
+      line-height: normal;
     }
 
 
@@ -186,7 +187,7 @@ body{
     .box-shadow (0 0 0 1px #d1d8de inset, 0 2px 0 #ffffff inset, 0 2px 0 #d1d8de);
 }
 
-#historic_event_1:hover #historic_dot_1, #historic_event_2:hover #historic_dot_2, #historic_event_3:hover #historic_dot_3, #historic_event_4:hover #historic_dot_4, 
+#historic_event_1:hover #historic_dot_1, #historic_event_2:hover #historic_dot_2, #historic_event_3:hover #historic_dot_3, #historic_event_4:hover #historic_dot_4,
 #historic_event_5:hover, #historic_dot_5, #historic_event_6:hover, #historic_dot_6 {
     .transform (scale(1.15) translate3d(0,0,0));
 }
@@ -407,5 +408,3 @@ body{
     color: $apricot-color;
   }
 }
-
-
